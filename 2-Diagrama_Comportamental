@@ -1,0 +1,126 @@
+Eles descrevem como o sistema se comporta com o tempo, ou seja, mostram os processos, interações, mudanças de estado e fluxos de atividades entre os elementos do sistema. São essenciais para modelar:
+
+
+1. Diagrama de Casos de Uso (Use Case Diagram)
+Mostra funcionalidades do sistema sob a perspectiva do usuário (ou ator).
+
+Foca no "o que o sistema faz", não em como.
+
+Cada "caso de uso" é uma ação ou função que o sistema oferece.
+
+📌 Elementos principais:
+
+Ator: Pessoa ou sistema externo que interage com o sistema.
+
+Caso de uso: A funcionalidade oferecida.
+
+Associações: Conexões entre atores e casos de uso.
+
+Include / Extend: Relações entre casos.
+
+📷 Exemplo:
+
+yaml
+Copiar
+Editar
+Ator: Cliente
+Casos de uso: Fazer Login, Ver Produtos, Comprar Produto
+
+--------------------------------------------------------------------------------------------------------
+
+2. Diagrama de Atividades (Activity Diagram)
+Representa o fluxo de atividades ou processos.
+
+Útil para modelar regras de negócio, algoritmos ou workflows.
+
+📌 Elementos principais:
+
+Início e fim do fluxo
+
+Ações/atividades
+
+Decisões (condicionais)
+
+Fluxos de controle
+
+Fork/Join (para processos paralelos)
+
+📷 Exemplo:
+
+css
+Copiar
+Editar
+[Início] → [Validar Dados] → [Decisão: Dados válidos?]
+      ↘ Não  → [Exibir Erro]
+      ↘ Sim  → [Processar Pedido] → [Fim]
+
+--------------------------------------------------------------------------------------------------------
+
+3. Diagrama de Sequência (Sequence Diagram)
+Mostra a ordem das interações entre objetos ao longo do tempo.
+
+Ideal para representar cenários de uso específicos.
+
+📌 Elementos principais:
+
+Objetos (ou participantes)
+
+Linha de vida (linha vertical)
+
+Mensagens trocadas (horizontal, com ordem)
+
+Ativação (blocos indicando tempo de execução)
+
+📷 Exemplo:
+
+yaml
+Copiar
+Editar
+Cliente → Sistema: login()
+Sistema → Banco: autenticar()
+Banco → Sistema: sucesso
+Sistema → Cliente: exibirHome()
+
+--------------------------------------------------------------------------------------------------------
+
+4. Diagrama de Comunicação (Collaboration Diagram)
+Similar ao de sequência, mas foca mais na estrutura da comunicação entre objetos do que na ordem temporal.
+
+Mostra os objetos e mensagens trocadas, com números indicando sequência.
+
+--------------------------------------------------------------------------------------------------------
+
+5. Diagrama de Estados (State Machine Diagram)
+Representa os estados possíveis de um objeto e as transições entre eles com base em eventos.
+
+Muito usado para objetos que mudam de estado com o tempo (como uma máquina de vendas, um pedido, etc).
+
+📌 Elementos principais:
+
+Estados
+
+Transições
+
+Eventos que causam as transições
+
+Ações durante transições
+
+📷 Exemplo:
+Pedido:
+
+scss
+Copiar
+Editar
+[Solicitado] → (pagar) → [Pago] → (enviar) → [Enviado] → (receber) → [Concluído]
+
+--------------------------------------------------------------------------------------------------------
+
+6. Diagrama de Interação Geral (Interaction Overview)
+Combina elementos de diagrama de atividades com diagrama de sequência, oferecendo uma visão geral de interações.
+
+--------------------------------------------------------------------------------------------------------
+
+7. Diagrama de Tempo (Timing Diagram)
+Mostra o comportamento de objetos ao longo de uma linha temporal contínua.
+
+Útil para sistemas embarcados e de tempo real.

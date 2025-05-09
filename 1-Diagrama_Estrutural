@@ -1,0 +1,92 @@
+Eles mostram "o que o sistema é" em termos de classes, objetos, pacotes, componentes e a forma como essas partes estão conectadas. São usados principalmente para design de software, análise de sistemas e documentação técnica.
+
+1. Diagrama de Classes
+Mais comum e essencial.
+
+Representa as classes do sistema, com seus atributos e métodos.
+
+Também mostra os relacionamentos entre classes: associação, herança, composição, agregação, dependência.
+
+📌 Exemplo básico de uma classe:
+
+pgsql
+Copiar
+Editar
++-------------------+
+|     Pessoa        |
++-------------------+
+| - nome: String    |
+| - idade: int      |
++-------------------+
+| + falar(): void   |
+| + andar(): void   |
++-------------------+
+🔗 Relacionamentos:
+
+Associação: Pessoa —> Endereço
+
+Herança: Funcionario <|-- Pessoa
+
+Composição: Casa o--> Comodo (todo/parte)
+
+--------------------------------------------------------------------------------------------------------
+2. Diagrama de Objetos
+Mostra instâncias reais de classes em um determinado momento.
+
+Útil para visualizar o estado do sistema em tempo de execução.
+
+📌 Exemplo:
+
+makefile
+Copiar
+Editar
+:Cliente
+nome = "João"
+idade = 30
+
+--------------------------------------------------------------------------------------------------------
+
+3. Diagrama de Componentes
+Mostra os componentes físicos de software: módulos, bibliotecas, arquivos executáveis.
+
+Usado para modelar a estrutura de sistemas mais complexos.
+
+📌 Exemplo:
+
+css
+Copiar
+Editar
+[LoginService] ---> [AuthLibrary]
+
+--------------------------------------------------------------------------------------------------------
+
+4. Diagrama de Implantação (Deployment)
+Mostra a infraestrutura física onde o software será executado: servidores, dispositivos, conexões de rede.
+
+📌 Exemplo:
+
+css
+Copiar
+Editar
+[Servidor Web] ---> [Servidor de Banco de Dados]
+
+--------------------------------------------------------------------------------------------------------
+
+5. Diagrama de Pacotes
+Agrupa classes e outros elementos em pacotes para organizar o sistema em módulos.
+
+Mostra dependências entre pacotes.
+
+📌 Exemplo:
+
+css
+Copiar
+Editar
+[Controle] ---> [Modelo] ---> [Persistência]
+
+--------------------------------------------------------------------------------------------------------
+
+6. Diagrama de Perfis
+Permite estender a UML com estereótipos e definições próprias.
+
+Usado quando há necessidade de adaptar a UML a domínios específicos.
